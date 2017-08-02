@@ -52,4 +52,4 @@ NSString *encryptoStr           = [AESCommonCrypto encryptAESData:self.textFIeld
 ```
 NSString *decryptStr            = [AESCommonCrypto decryptAESData:self.encryptoLbl.text];
 ```
-![效果截图](https://github.com/wyxlh/AESEncryption/blob/master/Simulator%20Screen%20Shot%202017%E5%B9%B48%E6%9C%882%E6%97%A5%20%E4%B8%8A%E5%8D%8811.51.20.png);
+![效果截图](https://github.com/wyxlh/AESEncryption/blob/master/Simulator%20Screen%20Shot%202017%E5%B9%B48%E6%9C%882%E6%97%A5%20%E4%B8%8A%E5%8D%8811.51.20.png)
