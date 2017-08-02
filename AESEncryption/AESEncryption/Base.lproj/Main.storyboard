@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wjR-nb-zF8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AES加密解密-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你要加密的内容" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwd-h2-b4X">
+                                <rect key="frame" x="36" y="124" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCt-zf-ZVO">
+                                <rect key="frame" x="162.5" y="257.5" width="50" height="30"/>
+                                <state key="normal" title="解密"/>
+                                <connections>
+                                    <action selector="decrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNw-Ee-DJb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTU-4m-BEj">
+                                <rect key="frame" x="162.5" y="174" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ekk-DL-Rtc"/>
+                                </constraints>
+                                <state key="normal" title="加密"/>
+                                <connections>
+                                    <action selector="encrypto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSb-DF-hPf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示解密的内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ori-Vv-EAc">
+                                <rect key="frame" x="36" y="317.5" width="303" height="13.5"/>
+                                <color key="backgroundColor" red="0.99430137870000002" green="0.39026349780000003" blue="0.03077316657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示加密的内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPQ-PI-wtk">
+                                <rect key="frame" x="36" y="224" width="303" height="14"/>
+                                <color key="backgroundColor" red="0.99430137870000002" green="0.39026349780000003" blue="0.03077316657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCt-zf-ZVO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hJ-hf-8GG"/>
+                            <constraint firstItem="yCt-zf-ZVO" firstAttribute="top" secondItem="DPQ-PI-wtk" secondAttribute="bottom" constant="20" id="3YJ-SN-ViI"/>
+                            <constraint firstItem="vwd-h2-b4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="6T0-cm-Cu6"/>
+                            <constraint firstItem="NTU-4m-BEj" firstAttribute="top" secondItem="vwd-h2-b4X" secondAttribute="bottom" constant="20" id="A02-2q-RPO"/>
+                            <constraint firstItem="vwd-h2-b4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K3j-ue-gZj"/>
+                            <constraint firstItem="NTU-4m-BEj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kw1-pr-2y6"/>
+                            <constraint firstItem="yCt-zf-ZVO" firstAttribute="height" secondItem="NTU-4m-BEj" secondAttribute="height" id="M5H-wc-UuQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vwd-h2-b4X" secondAttribute="trailing" constant="20" id="Rce-Ud-Jle"/>
+                            <constraint firstItem="DPQ-PI-wtk" firstAttribute="top" secondItem="NTU-4m-BEj" secondAttribute="bottom" constant="20" id="SgF-Qm-Fxr"/>
+                            <constraint firstItem="Ori-Vv-EAc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bYa-rN-20j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPQ-PI-wtk" secondAttribute="trailing" constant="20" id="cNT-Tx-Wnq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ori-Vv-EAc" secondAttribute="trailing" constant="20" id="dQl-y6-9lp"/>
+                            <constraint firstItem="DPQ-PI-wtk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="nyk-p6-ULK"/>
+                            <constraint firstItem="vwd-h2-b4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="q7t-J8-8Uo"/>
+                            <constraint firstItem="yCt-zf-ZVO" firstAttribute="width" secondItem="NTU-4m-BEj" secondAttribute="width" id="qxl-oG-XPF"/>
+                            <constraint firstItem="Ori-Vv-EAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svS-kt-bGv"/>
+                            <constraint firstItem="Ori-Vv-EAc" firstAttribute="top" secondItem="yCt-zf-ZVO" secondAttribute="bottom" constant="30" id="utg-aE-h9n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AES加密解密" id="S5d-Gs-2yD">
+                        <barButtonItem key="rightBarButtonItem" title="重置" id="5dR-qX-l5b">
+                            <connections>
+                                <action selector="deleteContent:" destination="BYZ-38-t0r" id="ZG5-hb-vYX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentLbl" destination="Ori-Vv-EAc" id="pPp-7b-ch9"/>
+                        <outlet property="encryptoLbl" destination="DPQ-PI-wtk" id="cJy-pw-i3i"/>
+                        <outlet property="textFIeld" destination="vwd-h2-b4X" id="oOd-bG-54g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="-52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fhk-c7-f6z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wjR-nb-zF8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0eH-cG-ac2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F9U-NJ-mg3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCP-Mp-Hx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+</document>
